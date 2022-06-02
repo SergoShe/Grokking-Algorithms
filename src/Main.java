@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Random;
 
 public class Main {
@@ -13,7 +14,7 @@ public class Main {
         //int[] myList2 = {0, 1, 0, -1, 6, -48, 34, 1};
         //int[] myList2 = {-1, 0,1, -1, 0, -1, 0, 1};
         //System.out.println(Arrays.toString(Chapter2.selectionSort(myList2)));
-        */
+
         //Chapter4
 
         int[] myList4 = new int[1000];
@@ -27,5 +28,19 @@ public class Main {
         System.out.println(Chapter4.max(myList4));
 
         Chapter4.quickSort(myList4);
+        */
+        //Chapter6
+        HashMap<String,String[]> graph = new HashMap<>();
+        graph.put("you",new String[] {"alice","bob","claire"});
+        graph.put("bob",new String[] {"anuj","peggi"});
+        graph.put("alice",new String[] {"peggy"});
+        graph.put("claire",new String[] {"thom","jonny"});
+        graph.put("anuj",new String[] {});
+        graph.put("peggy",new String[] {});
+        graph.put("thom",new String[] {});
+        graph.put("jonny",new String[] {});
+        Chapter6.searchSeller(graph, "you");
+
+
     }
 }
