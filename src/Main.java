@@ -28,19 +28,63 @@ public class Main {
         System.out.println(Chapter4.max(myList4));
 
         Chapter4.quickSort(myList4);
-        */
-        //Chapter6
-        HashMap<String,String[]> graph = new HashMap<>();
-        graph.put("you",new String[] {"alice","bob","claire"});
-        graph.put("bob",new String[] {"anuj","peggi"});
-        graph.put("alice",new String[] {"peggy"});
-        graph.put("claire",new String[] {"thom","jonny"});
-        graph.put("anuj",new String[] {});
-        graph.put("peggy",new String[] {});
-        graph.put("thom",new String[] {});
-        graph.put("jonny",new String[] {});
-        Chapter6.searchSeller(graph, "you");
 
+        //Chapter6
+        HashMap<String,String[]> graph6 = new HashMap<>();
+        graph6.put("you",new String[] {"alice","bob","claire"});
+        graph6.put("bob",new String[] {"anuj","peggi"});
+        graph6.put("alice",new String[] {"peggy"});
+        graph6.put("claire",new String[] {"thom","jonny"});
+        graph6.put("anuj",new String[] {});
+        graph6.put("peggy",new String[] {});
+        graph6.put("thom",new String[] {});
+        graph6.put("jonny",new String[] {});
+        Chapter6.searchSeller(graph6, "you");
+        */
+        //Chapter7
+
+        HashMap<String,HashMap<String, Double>> graph = new HashMap<>();
+        HashMap<String,Double> nodeStart = new HashMap<>();
+        nodeStart.put("A",6.0);
+        nodeStart.put("B",2.0);
+        graph.put("start",nodeStart);
+        HashMap<String,Double> nodeA = new HashMap<>();
+        nodeA.put("end",1.0);
+        graph.put("A",nodeA);
+        HashMap<String,Double> nodeB = new HashMap<>();
+        nodeB.put("A",3.0);
+        nodeB.put("end",5.0);
+        graph.put("B",nodeB);
+        HashMap<String,Double> nodeEnd = new HashMap<>();
+        graph.put("end",nodeEnd);
+        Chapter7.findingTheShortestPath(graph, "B", "end");
+
+        /*
+        //Данные из Упражнения - задача 1
+        HashMap<String,HashMap<String, Double>> graph = new HashMap<>();
+        HashMap<String,Double> nodeStart = new HashMap<>();
+        nodeStart.put("A",5.0);
+        nodeStart.put("B",2.0);
+        graph.put("start",nodeStart);
+        HashMap<String,Double> nodeA = new HashMap<>();
+        nodeA.put("C",4.0);
+        nodeA.put("D",2.0);
+        graph.put("A",nodeA);
+        HashMap<String,Double> nodeB = new HashMap<>();
+        nodeB.put("A",8.0);
+        nodeB.put("D",7.0);
+        graph.put("B",nodeB);
+        HashMap<String,Double> nodeC = new HashMap<>();
+        nodeC.put("end",3.0);
+        nodeC.put("D",6.0);
+        graph.put("C",nodeC);
+        HashMap<String,Double> nodeD = new HashMap<>();
+        nodeD.put("end",1.0);
+        graph.put("D",nodeD);
+        HashMap<String,Double> nodeEnd = new HashMap<>();
+        graph.put("end",nodeEnd);
+        Chapter7.findingTheShortestPath(graph, "start", "end");
+        */
 
     }
 }
