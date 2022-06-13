@@ -42,7 +42,6 @@ public class Main {
         Chapter6.searchSeller(graph6, "you");
         */
         //Chapter7
-
         HashMap<String,HashMap<String, Double>> graph = new HashMap<>();
         HashMap<String,Double> nodeStart = new HashMap<>();
         nodeStart.put("A",6.0);
@@ -58,33 +57,5 @@ public class Main {
         HashMap<String,Double> nodeEnd = new HashMap<>();
         graph.put("end",nodeEnd);
         Chapter7.findingTheShortestPath(graph, "B", "end");
-
-        /*
-        //Данные из Упражнения - задача 1
-        HashMap<String,HashMap<String, Double>> graph = new HashMap<>();
-        HashMap<String,Double> nodeStart = new HashMap<>();
-        nodeStart.put("A",5.0);
-        nodeStart.put("B",2.0);
-        graph.put("start",nodeStart);
-        HashMap<String,Double> nodeA = new HashMap<>();
-        nodeA.put("C",4.0);
-        nodeA.put("D",2.0);
-        graph.put("A",nodeA);
-        HashMap<String,Double> nodeB = new HashMap<>();
-        nodeB.put("A",8.0);
-        nodeB.put("D",7.0);
-        graph.put("B",nodeB);
-        HashMap<String,Double> nodeC = new HashMap<>();
-        nodeC.put("end",3.0);
-        nodeC.put("D",6.0);
-        graph.put("C",nodeC);
-        HashMap<String,Double> nodeD = new HashMap<>();
-        nodeD.put("end",1.0);
-        graph.put("D",nodeD);
-        HashMap<String,Double> nodeEnd = new HashMap<>();
-        graph.put("end",nodeEnd);
-        Chapter7.findingTheShortestPath(graph, "start", "end");
-        */
-
     }
 }
