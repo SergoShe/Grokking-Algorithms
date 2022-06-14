@@ -56,6 +56,7 @@ public class Main {
         graph.put("B",nodeB);
         HashMap<String,Double> nodeEnd = new HashMap<>();
         graph.put("end",nodeEnd);
-        Chapter7.findingTheShortestPath(graph, "B", "end");
+
+        System.out.println(Chapter7.findingTheShortestPath(graph, "start", "end"));
     }
 }

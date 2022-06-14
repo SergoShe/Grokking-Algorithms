@@ -76,4 +76,21 @@ public class Chapter7Test {
         String actual = Chapter7.findLowerCostNode(costs, processedNodes);
         assertEquals(extended, actual);
     }
+
+    @Test
+    public void testCreateMessageTheShortestPath() {
+        HashMap<String, String> parents = new HashMap<>();
+        parents.put("start", null);
+        parents.put("A", "start");
+        parents.put("B", "start");
+        parents.put("C", "A");
+        parents.put("D", "A");
+        parents.put("end", "D");
+        String endNode = "end";
+        double endCost = 8.0;
+        String extended = "The Shortest Path: start - A - D - end : 8.0";
+        String actual = Chapter7.createMessageTheShortestPath(parents,endNode,endCost);
+        assertEquals(extended,actual);
+
+    }
 }
