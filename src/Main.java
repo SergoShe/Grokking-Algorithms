@@ -1,7 +1,3 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Random;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -10,13 +6,13 @@ public class Main {
         int[] myList1 = {1, 3, 5, 7, 9};
         System.out.println(Chapter1.binarySearch(myList1, 3));
         System.out.println(Chapter1.binarySearch(myList1, -1));
-        Chapter2
-        //int[] myList2 = {0, 1, 0, -1, 6, -48, 34, 1};
+
+        //Chapter2
+        int[] myList2 = {0, 1, 0, -1, 6, -48, 34, 1};
         //int[] myList2 = {-1, 0,1, -1, 0, -1, 0, 1};
-        //System.out.println(Arrays.toString(Chapter2.selectionSort(myList2)));
+        System.out.println(Arrays.toString(Chapter2.selectionSort(myList2)));
 
         //Chapter4
-
         int[] myList4 = new int[1000];
         Random rand = new Random();
         for (int i = 0; i < myList4.length; i++) {
@@ -40,7 +36,7 @@ public class Main {
         graph6.put("thom",new String[] {});
         graph6.put("jonny",new String[] {});
         Chapter6.searchSeller(graph6, "you");
-        */
+
         //Chapter7
         HashMap<String,HashMap<String, Double>> graph = new HashMap<>();
         HashMap<String,Double> nodeStart = new HashMap<>();
@@ -58,5 +54,6 @@ public class Main {
         graph.put("end",nodeEnd);
 
         System.out.println(Chapter7.findingTheShortestPath(graph, "start", "end"));
+        */
     }
 }
