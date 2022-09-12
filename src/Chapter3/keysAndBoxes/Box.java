@@ -1,4 +1,4 @@
-package Chapter3;
+package chapter3.keysAndBoxes;
 
 import java.util.HashSet;
 import java.util.Set;
